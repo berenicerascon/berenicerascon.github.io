@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Study Timer</h1>
+        
+        <form action="/start" method="POST">
+            <button type="submit">Start Session</button>
+        </form>
+        <form action="/stop" method="POST">
+            <button type="submit">Stop Session</button>
+        </form>
+        <h2>Session Logs</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Start Time</th>
+                    <th>Break</th>
+                    <th>End Time</th>
+                </tr>
+            </thead>
+            <tbody id="session-log">
+            </tbody>
+        </table>
+        <form id="Logs">
+            <div class="form-group">
+                <input type="time" name="start-time" placeholder="Start Time" required>
+                <input type="time" name="break-time" placeholder="Break" required>
+                <input type="time" name="end-time" placeholder="End Time" required>
+            </div>
+            <button type="submit">Add Session</button>
+        </form>
+    </div>
+</body>
+</html>
